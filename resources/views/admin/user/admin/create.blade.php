@@ -10,10 +10,10 @@
                 @csrf
                 <div class="modal-body">
                     <div class="row gy-2">
-                        <div class="col-md-6">
+                        {{-- <div class="col-md-6">
                             <x-form-input name="name" label="Name *" />
-                        </div>
-                        <div class="col-md-6">
+                        </div> --}}
+                        {{-- <div class="col-md-6">
                             <x-form-input type="email" name="email" label="Email *" />
                         </div>
                         <div class="col-md-6">
@@ -48,7 +48,7 @@
                             <input class="form-check-input" type="checkbox" id="is_active_input" value="1"
                                 name="is_active" checked>
                             <label class="form-check-label" for="is_active_input" id="is_active_label">Active</label>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 <div class="modal-footer">

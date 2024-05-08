@@ -21,10 +21,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        // $this->registerPolicies();
-        // Gate::before(function ($user, $ability) {
-        //     return $user->hasRole('superadmin') ? true : null;
-        // });
+        $this->registerPolicies();
+        Gate::before(function ($user, $ability) {
+            return $user->hasRole('superadmin') ? true : null;
+        });
         // Schema::defaultStringLength(191);
     }
 }
