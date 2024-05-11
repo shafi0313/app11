@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use RealRashid\SweetAlert\Facades\Alert;
 use App\Http\Controllers\MyProfileController;
 use App\Http\Controllers\Admin\AdminUserController;
 use App\Http\Controllers\Setting\AppDbBackupController;
@@ -8,6 +9,7 @@ use App\Http\Controllers\Setting\Permission\RoleController;
 use App\Http\Controllers\Setting\Permission\PermissionController;
 
 Route::get('/', function () {
+    Alert::success('Success', 'You are on Admin Dashboard');
     return view('admin.dashboard');
 })->name('dashboard');
 

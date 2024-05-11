@@ -91,6 +91,7 @@
 
     <!-- App js -->
     <script src="{{ asset('backend/js/app.min.js') }}"></script>
+    @include('sweetalert::alert')
 
     @stack('scripts')
     <div id="ajax_modal_container"></div>

@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use RealRashid\SweetAlert\Facades\Alert;
+
+
 abstract class Controller
 {
     protected function authorize(
@@ -9,7 +12,9 @@ abstract class Controller
         $error_message = 'Don\'t have permission to perform this action',
     ) {
         if (! user()->can($permission)) {
-            return redirect()->back()->withInput()->withErrors($error_message);
+            Alert::error('Error', $error_message);
+            return redirect()->back();
+            // return redirect()->back()->withInput()->withErrors($error_message);
         }
     }
 }
