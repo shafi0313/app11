@@ -10,45 +10,50 @@
                 @csrf
                 <div class="modal-body">
                     <div class="row gy-2">
-                        {{-- <div class="col-md-6">
-                            <x-form-input name="name" label="Name *" />
-                        </div> --}}
-                        {{-- <div class="col-md-6">
-                            <x-form-input type="email" name="email" label="Email *" />
+                        <div class="col-md-6">
+                            <label for="name" class="form-label required">Name </label>
+                            <input type="text" name="name" class="form-control" required>
                         </div>
                         <div class="col-md-6">
-                            <x-form-input name="user_name" label="user name " />
+                            <label for="email" class="form-label required">Email </label>
+                            <input type="email" name="email" class="form-control" required>
                         </div>
                         <div class="col-md-6">
-                            <x-form-input name="phone" label="phone *" oninput="phoneIn(event)" />
+                            <label for="phone" class="form-label required">phone </label>
+                            <input type="text" name="phone" class="form-control" oninput="phoneIn(event)" required>
                         </div>
                         <div class="col-md-6">
                             <label for="gender" class="form-label">Gender *</label>
                             <select class="form-select" name="gender">
                                 <option selected disabled value="">Choose...</option>
-                                @foreach ($genders as $gender)
-                                    <option value="{{ $gender['id'] }}">{{ $gender['name'] }}</option>
+                                @foreach (config('var.genders') as $key => $gender)
+                                    <option value="{{ $key }}">{{ $gender }}</option>
                                 @endforeach
                             </select>
                         </div>
                         <div class="col-md-6">
-                            <x-form-input name="address" label="address *" />
+                            <label for="image" class="form-label">image </label>
+                            <input type="file" name="image" class="form-control">
+                        </div>
+                        <div class="col-md-12">
+                            <label for="address" class="form-label">address </label>
+                            <input type="text" name="address" class="form-control">
                         </div>
                         <div class="col-md-6">
-                            <x-form-input type="file" name="image" label="image *" />
+                            <label for="password" class="form-label required">password </label>
+                            <input type="password" name="password" class="form-control" required>
                         </div>
                         <div class="col-md-6">
-                            <x-form-input type="password" name="password" label="password *" />
-                        </div>
-                        <div class="col-md-6">
-                            <x-form-input type="password" name="password_confirmation" label="password confirmation *" />
+                            <label for="password_confirmation" class="form-label required">confirmation password
+                            </label>
+                            <input type="password" name="password_confirmation" class="form-control" required>
                         </div>
                         <div class="col-md-4 form-check form-switch">
                             <label for="is_active" class="form-label status_label d-block required">Status </label>
                             <input class="form-check-input" type="checkbox" id="is_active_input" value="1"
                                 name="is_active" checked>
                             <label class="form-check-label" for="is_active_input" id="is_active_label">Active</label>
-                        </div> --}}
+                        </div>
                     </div>
                 </div>
                 <div class="modal-footer">

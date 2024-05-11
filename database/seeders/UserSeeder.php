@@ -23,6 +23,15 @@ class UserSeeder extends Seeder
                 'removable' => 0,
                 'password' => bcrypt('##Zxc1234'),
         ]);
+        User::create([
+            'name' => 'User',
+                'email' => 'user@app.com',
+                'user_name' => null,
+                'role' => 2,
+                'gender' => Gender::MALE,
+                'removable' => 0,
+                'password' => bcrypt('##Zxc1234'),
+        ]);
         $admin->assignRole(['superadmin']);
     }
 }

@@ -1,12 +1,10 @@
-label {
-    text-transform: capitalize;
-}
 .status_label {
     margin-left: -28px;
 }
 #is_active_input {
     margin-left: -26px;
 }
+
 /* Bootstrap Date Picker Start */
 .bDP {
     position: relative !important;
@@ -21,16 +19,47 @@ label {
 }
 /* Bootstrap Date Picker End */
 
+
+/* Form CSS Start */
+.required::after {
+    content: "*";
+    color: red;
+    font-weight: bold;
+}
+label {
+    text-transform: capitalize;
+}
+/* Form CSS End */
+
 /* Table Start */
 table thead tr th {
     text-transform: capitalize;
 }
+
+.table-bold td {
+    font-weight: bold;
+}
+table .required::after {
+    content: "*";
+    color: red;
+    font-weight: bold;
+}
 /* Table End */
+
+/* Select2 Start */
+.select2-container {
+    width: 100% !important;
+}
+
+.form-group {
+    margin: 10px 0;
+}
 
 .select2-container {
     display: block !important;
     width: 100% !important;
 }
+/* Select2 End */
 
 .icon-btn{
     display: inline-block;
@@ -40,13 +69,7 @@ table thead tr th {
     cursor: pointer;
 }
 
-table .required::after {
-    content: "*";
-    color: red;
-    font-weight: bold;
-}
-
-/* loading-overlay */
+/* Loading-overlay Start */
 .loading-overlay {
     position: fixed;
     top: 0;
@@ -79,3 +102,4 @@ table .required::after {
       transform: rotate(360deg);
     }
   }
+/* Loading-overlay End*/

@@ -11,7 +11,7 @@ class LoginResponse implements LoginResponseContract
         if (user()->role == 1) {
             return redirect()->route('admin.dashboard');
         } else {
-            return back();
+            return redirect()->route('welcome');
         }
 
         return $request->wantsJson()
