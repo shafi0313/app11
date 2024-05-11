@@ -212,6 +212,7 @@ function changeStatus(arg) {
         dangerMode: true,
     }).then((willDelete) => {
         if (willDelete) {
+            showLoadingAnimation();
             $.ajax({
                 url: status.data("route"),
                 type: "PATCH",
@@ -219,6 +220,7 @@ function changeStatus(arg) {
                     status: status.data("value"),
                 },
                 success: (res) => {
+                    hideLoadingAnimation();
                     swal({
                         icon: "success",
                         title: "Success",
@@ -227,6 +229,7 @@ function changeStatus(arg) {
                     $(".table").DataTable().ajax.reload();
                 },
                 error: (err) => {
+                    hideLoadingAnimation();
                     swal({
                         icon: "error",
                         title: "Oops...",
@@ -248,6 +251,7 @@ function changeStatusPatch(arg) {
         dangerMode: true,
     }).then((willDelete) => {
         if (willDelete) {
+            showLoadingAnimation();
             $.ajax({
                 url: status.data("route"),
                 type: "PATCH",
@@ -255,6 +259,7 @@ function changeStatusPatch(arg) {
                     status: status.data("value"),
                 },
                 success: (res) => {
+                    hideLoadingAnimation();
                     swal({
                         icon: "success",
                         title: "Success",
@@ -263,6 +268,7 @@ function changeStatusPatch(arg) {
                     $(".table").DataTable().ajax.reload();
                 },
                 error: (err) => {
+                    hideLoadingAnimation();
                     swal({
                         icon: "error",
                         title: "Oops...",
@@ -284,6 +290,7 @@ function accept(arg) {
         dangerMode: true,
     }).then((willDelete) => {
         if (willDelete) {
+            showLoadingAnimation();
             $.ajax({
                 url: status.data("route"),
                 type: "GET",
@@ -291,6 +298,7 @@ function accept(arg) {
                     status: status.data("value"),
                 },
                 success: (res) => {
+                    hideLoadingAnimation();
                     swal({
                         icon: "success",
                         title: "Success",
@@ -299,6 +307,7 @@ function accept(arg) {
                     $(".table").DataTable().ajax.reload();
                 },
                 error: (err) => {
+                    hideLoadingAnimation();
                     swal({
                         icon: "error",
                         title: "Oops...",
@@ -320,6 +329,7 @@ function reject(arg) {
         dangerMode: true,
     }).then((willDelete) => {
         if (willDelete) {
+            showLoadingAnimation();
             $.ajax({
                 url: status.data("route"),
                 type: "GET",
@@ -327,6 +337,7 @@ function reject(arg) {
                     status: status.data("value"),
                 },
                 success: (res) => {
+                    hideLoadingAnimation();
                     swal({
                         icon: "success",
                         title: "Success",
@@ -335,6 +346,7 @@ function reject(arg) {
                     $(".table").DataTable().ajax.reload();
                 },
                 error: (err) => {
+                    hideLoadingAnimation();
                     swal({
                         icon: "error",
                         title: "Oops...",
