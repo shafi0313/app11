@@ -17,7 +17,7 @@ class MyProfileController extends Controller
     public function edit()
     {
         $myProfile = user();
-        $genders = config('datum.gender');
+        $genders = config('var.genders');
         return view('admin.user.my-profile.edit', compact('myProfile', 'genders'));
     }
 }

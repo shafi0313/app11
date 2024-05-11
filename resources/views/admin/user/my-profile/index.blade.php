@@ -6,9 +6,8 @@
         <div class="col-xl-5 col-lg-6">
             <div class="card text-center">
                 <div class="card-body ">
-                    <img src="{{ profileImg() }}" class="rounded-circle avatar-lg img-thumbnail"
-                    alt="profile-image">
-                    <a href="{{ route('admin.my-profile.edit', user()->id) }}">
+                    <img src="{{ profileImg() }}" class="rounded-circle avatar-lg img-thumbnail" alt="profile-image">
+                    <a href="{{ route('admin.my-profiles.edit', user()->id) }}">
                         <i class="fa-solid fa-pen-to-square my-profile-edit"></i>
                     </a>
 
@@ -42,16 +41,20 @@
 
                     <ul class="social-list list-inline mt-3 mb-0">
                         <li class="list-inline-item">
-                            <a href="javascript: void(0);" class="social-list-item border-primary text-primary"><i class="ri-facebook-circle-fill"></i></a>
+                            <a href="javascript: void(0);" class="social-list-item border-primary text-primary"><i
+                                    class="ri-facebook-circle-fill"></i></a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="javascript: void(0);" class="social-list-item border-danger text-danger"><i class="ri-google-fill"></i></a>
+                            <a href="javascript: void(0);" class="social-list-item border-danger text-danger"><i
+                                    class="ri-google-fill"></i></a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="javascript: void(0);" class="social-list-item border-info text-info"><i class="ri-twitter-fill"></i></a>
+                            <a href="javascript: void(0);" class="social-list-item border-info text-info"><i
+                                    class="ri-twitter-fill"></i></a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="javascript: void(0);" class="social-list-item border-secondary text-secondary"><i class="ri-github-fill"></i></a>
+                            <a href="javascript: void(0);" class="social-list-item border-secondary text-secondary"><i
+                                    class="ri-github-fill"></i></a>
                         </li>
                     </ul>
                 </div> <!-- end card-body -->

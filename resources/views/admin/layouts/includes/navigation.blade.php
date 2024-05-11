@@ -34,10 +34,9 @@
     <div class="h-100" id="leftside-menu-container" data-simplebar>
         <!-- Leftbar User -->
         <div class="leftbar-user p-3 text-white">
-            <a href="{{ route('admin.my-profile.index') }}" class="d-flex align-items-center text-reset">
+            <a href="{{ route('admin.my-profiles.index') }}" class="d-flex align-items-center text-reset">
                 <div class="flex-shrink-0">
-                    <img src="{{ profileImg() }}" alt="user-image" height="42"
-                        class="rounded-circle shadow">
+                    <img src="{{ profileImg() }}" alt="user-image" height="42" class="rounded-circle shadow">
                 </div>
                 <div class="flex-grow-1 ms-2">
                     <span class="fw-semibold fs-15 d-block">{{ user()->name }}</span>
@@ -77,8 +76,8 @@
 
             {{-- settings --}}
             <li class="side-nav-item">
-                <a data-bs-toggle="collapse" href="#sidebarSettings" aria-expanded="false" aria-controls="sidebarSettings"
-                    class="side-nav-link">
+                <a data-bs-toggle="collapse" href="#sidebarSettings" aria-expanded="false"
+                    aria-controls="sidebarSettings" class="side-nav-link">
                     <i class="fa-solid fa-gear"></i>
                     <span> @lang('Settings') </span>
                     <span class="menu-arrow"></span>

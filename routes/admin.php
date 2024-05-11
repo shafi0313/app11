@@ -32,4 +32,4 @@ Route::controller(AppDbBackupController::class)->prefix('app-db-backup')->group(
 Route::resource('/admin-users', AdminUserController::class)->except(['show','create']);
 Route::patch('/admin-users/is-active/{user}', [AdminUserController::class, 'status'])->name('admin_users.is_active');
 
-Route::resource('/my-profile', MyProfileController::class)->only(['index','edit']);
+Route::resource('/my-profiles', MyProfileController::class)->only(['index','edit']);
