@@ -24,6 +24,7 @@ function ajaxDelete(arg, type) {
         dangerMode: true,
     }).then((willDelete) => {
         if (willDelete) {
+            showLoadingAnimation();
             $.ajax({
                 url: args.data("route"),
                 type: "delete",
@@ -31,11 +32,13 @@ function ajaxDelete(arg, type) {
                     id: args.data("value"),
                 },
                 success: (res) => {
+                    hideLoadingAnimation();
                     swal({
                         icon: "success",
                         title: "Success",
                         text: res.message,
                     }).then((confirm) => {
+                        hideLoadingAnimation();
                         if (confirm) {
                             if (type == "dt") {
                                 $(".table").DataTable().ajax.reload();

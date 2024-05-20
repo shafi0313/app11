@@ -31,7 +31,7 @@
                             </ul>
                         </div>
                     @endif
-                    <table id="data_table" class="table table-bordered bordered table-centered mb-0 w-100">
+                    <table id="data_table" class="table table-bordered table-centered mb-0 w-100">
                         <thead>
                             <tr>
                                 <th>SL</th>
@@ -51,26 +51,21 @@
                                     <td class="">
                                         <div class="d-flex align-items-center gap-3 fs-6">
                                             @can('permission-change')
-                                                <a href="{{ route('admin.role.show', $role->id) }}" class="text-success"
-                                                    data-bs-placement="bottom" data-bs-toggle="tooltip"
-                                                    data-bs-original-title="Update Permission" title="">
+                                                <a href="{{ route('admin.role.show', $role->id) }}" class="text-success" title="Update Permission">
                                                     <i class="fa-solid fa-shield"></i>
                                                 </a>
                                             @endcan
                                             @can('role-edit')
                                                 <a data-route="{{ route('admin.role.edit', $role->id) }}"
                                                     data-value="{{ $role->id }}" onclick="ajaxEdit(this)"
-                                                    href="javascript:void(0)" class="text-primary" data-bs-placement="bottom"
-                                                    data-bs-toggle="tooltip" data-bs-original-title="Edit Role" title="">
+                                                    href="javascript:void(0)" class="text-primary" title="Edit Role">
                                                     <i class="fa fa-edit"></i>
                                                 </a>
                                             @endcan
                                             @if ($role->removable && user()->can('role-delete'))
                                                 <a data-route="{{ route('admin.role.destroy', $role->id) }}"
                                                     data-value="{{ $role->id }}" onclick="ajaxDelete(this, 'nodt')"
-                                                    href="javascript:void(0)" class="text-danger" data-bs-placement="bottom"
-                                                    data-bs-toggle="tooltip" data-bs-original-title="Delete Role"
-                                                    title="">
+                                                    href="javascript:void(0)" class="text-danger" title="Delete Role">
                                                     <i class="fa fa-trash"></i>
                                                 </a>
                                             @endif
@@ -85,66 +80,8 @@
             </div> <!-- end card -->
         </div><!-- end col -->
     </div><!-- end row -->
-    
-    @push('scripts')
-        {{-- <script>
-            $(function() {
-                $('#data_table').DataTable({
-                    processing: true,
-                    serverSide: true,
-                    deferRender: true,
-                    ordering: true,
-                    // responsive: true,
-                    scrollX: true,
-                    scrollY: 400,
-                    ajax: "{{ route('admin.sliders.index') }}",
-                    columns: [{
-                            data: 'DT_RowIndex',
-                            name: 'DT_RowIndex',
-                            title: 'SL',
-                            className: "text-center",
-                            width: "17px",
-                            searchable: false,
-                            orderable: false,
-                        },
-                        {
-                            data: 'content',
-                            name: 'content',
-                            title: 'content'
-                        },
-                        {
-                            data: 'image',
-                            name: 'image',
-                            title: 'image'
-                        },
-                        {
-                            data: 'is_active',
-                            name: 'is_active',
-                            title: 'Status'
-                        },
-                        {
-                            data: 'action',
-                            name: 'action',
-                            title: 'Action',
-                            className: "text-center",
-                            width: "60px",
-                            orderable: false,
-                            searchable: false,
-                        },
-                    ],
-                    // fixedColumns: false,
-                    scroller: {
-                        loadingIndicator: true
-                    }
-                });
-            });
-        </script> --}}
-    @endpush
-@endsection
 
-
-
-@can('role-add')
+    @can('role-add')
     <div class="modal fade" id="createModal" tabindex="-1" aria-labelledby="createModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-xl">
             <div class="modal-content">
@@ -175,3 +112,11 @@
         </div>
     </div>
 @endcan
+
+    @push('scripts')
+    @endpush
+@endsection
+
+
+
+

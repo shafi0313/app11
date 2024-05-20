@@ -74,6 +74,7 @@
                 </div>
             </li>
 
+            <li class="side-nav-title mt-2">Settings</li>
             {{-- settings --}}
             <li class="side-nav-item">
                 <a data-bs-toggle="collapse" href="#sidebarSettings" aria-expanded="false"
@@ -96,14 +97,14 @@
 
 
 
-            <li class="side-nav-item">
+            {{-- <li class="side-nav-item">
                 <a href="" class="side-nav-link">
                     <i class="ri-calendar-2-fill"></i>
                     <span> Calendar </span>
                 </a>
-            </li>
+            </li> --}}
 
-            <li class="side-nav-item">
+            {{-- <li class="side-nav-item">
                 <a data-bs-toggle="collapse" href="#sidebarEmail" aria-expanded="false" aria-controls="sidebarEmail"
                     class="side-nav-link">
                     <i class="ri-mail-fill"></i>
@@ -120,11 +121,11 @@
                         </li>
                     </ul>
                 </div>
-            </li>
+            </li> --}}
 
-            <li class="side-nav-title mt-2">Custom</li>
+            {{-- <li class="side-nav-title mt-2">Custom</li> --}}
 
-            <li class="side-nav-item">
+            {{-- <li class="side-nav-item">
                 <a data-bs-toggle="collapse" href="#sidebarMultiLevel" aria-expanded="false"
                     aria-controls="sidebarMultiLevel" class="side-nav-link">
                     <i class="ri-share-fill"></i>
@@ -183,7 +184,7 @@
                         </li>
                     </ul>
                 </div>
-            </li>
+            </li> --}}
 
 
         </ul>
