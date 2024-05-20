@@ -72,65 +72,7 @@
         </div><!-- end col -->
     </div><!-- end row -->
 
-    @push('scripts')
-        {{-- <script>
-            $(function() {
-                $('#data_table').DataTable({
-                    processing: true,
-                    serverSide: true,
-                    deferRender: true,
-                    ordering: true,
-                    // responsive: true,
-                    scrollX: true,
-                    scrollY: 400,
-                    ajax: "{{ route('admin.sliders.index') }}",
-                    columns: [{
-                            data: 'DT_RowIndex',
-                            name: 'DT_RowIndex',
-                            title: 'SL',
-                            className: "text-center",
-                            width: "17px",
-                            searchable: false,
-                            orderable: false,
-                        },
-                        {
-                            data: 'content',
-                            name: 'content',
-                            title: 'content'
-                        },
-                        {
-                            data: 'image',
-                            name: 'image',
-                            title: 'image'
-                        },
-                        {
-                            data: 'is_active',
-                            name: 'is_active',
-                            title: 'Status'
-                        },
-                        {
-                            data: 'action',
-                            name: 'action',
-                            title: 'Action',
-                            className: "text-center",
-                            width: "60px",
-                            orderable: false,
-                            searchable: false,
-                        },
-                    ],
-                    // fixedColumns: false,
-                    scroller: {
-                        loadingIndicator: true
-                    }
-                });
-            });
-        </script> --}}
-    @endpush
-@endsection
-
-
-
-@can('role-add')
+    @can('role-add')
     <div class="modal fade" id="createModal" tabindex="-1" aria-labelledby="createModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-xl">
             <div class="modal-content">
@@ -169,4 +111,9 @@
         </div>
     </div>
 @endcan
+
+    @push('scripts')
+    @endpush
+@endsection
+
 
