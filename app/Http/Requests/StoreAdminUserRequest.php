@@ -26,7 +26,7 @@ class StoreAdminUserRequest extends FormRequest
             'email' => ['required', 'string', 'min:1', 'max:64', 'unique:users,email'],
             'user_name' => ['nullable', 'string', 'min:1', 'max:32', 'unique:users,user_name'],
             'gender' => ['nullable', 'integer', 'in:1,2,3'],
-            'phone' => ['required', 'string', 'min:1', 'max:32'],
+            'phone' => ['required', 'phone:BD'],
             'address' => ['required', 'string', 'min:1', 'max:191'],
             'is_active' => ['nullable', 'boolean', 'in:0,1'],
             'image' => ['nullable', 'image', 'mimes:jpeg,jpg,JPG,png,webp,svg'],

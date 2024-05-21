@@ -27,7 +27,6 @@ class UpdateAdminUserRequest extends FormRequest
             'user_name' => ['nullable', 'string', 'min:1', 'max:32', 'unique:users,user_name,'.$this->admin_user->id.'id'],
             'gender' => ['required', 'integer', 'in:1,2,3'],
             'phone' => ['required', 'phone:BD'],
-            // 'phone' => ['required', 'string', 'min:1', 'max:32'],
             'address' => ['required', 'string', 'min:1', 'max:191'],
             'is_active' => ['nullable', 'boolean'],
             'image' => ['nullable', 'image', 'mimes:jpeg,jpg,JPG,png,webp,svg'],

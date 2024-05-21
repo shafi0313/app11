@@ -10,52 +10,63 @@
                 enctype="multipart/form-data">
                 @csrf @method('PUT')
                 <div class="modal-body">
-                    @bind($admin_user)
-                        <div class="row gy-2">
-                            <div class="col-md-6">
-                                <x-form-input name="name" label="Name *" />
-                            </div>
-                            <div class="col-md-6">
-                                <x-form-input type="email" name="email" label="Email *" />
-                            </div>
-                            <div class="col-md-6">
-                                <x-form-input name="user_name" label="user name " />
-                            </div>
-                            <div class="col-md-6">
-                                <x-form-input name="phone" label="phone *" oninput="phoneIn(event)" />
-                            </div>
-                            <div class="col-md-6">
-                                <label for="gender" class="form-label">Gender *</label>
-                                <select class="form-select" name="gender">
-                                    <option selected disabled value="">Choose...</option>
-                                    @foreach ($genders as $gender)
-                                        <option value="{{ $gender['id'] }}" @selected($gender['id'] == $admin_user->gender)>
-                                            {{ $gender['name'] }}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-                            <div class="col-md-6">
-                                <x-form-input name="address" label="address *" />
-                            </div>
-                            <div class="col-md-6">
-                                <x-form-input type="file" name="image" label="image " />
-                            </div>
-                            <div class="col-md-6">
-                                <label for="password" class="form-label">Old Password</label>
-                                <input type="password" name="password" class="form-control">
-                            </div>
-                            <div class="col-md-6">
-                                <label for="password" class="form-label">Password</label>
-                                <input type="password" name="password" class="form-control">
-                            </div>
-                            <div class="col-md-4 form-check form-switch">
-                                <label for="is_active" class="form-label status_label d-block required">Status </label>
-                                <input class="form-check-input" type="checkbox" id="is_active_input" value="1"
-                                    name="is_active" checked>
-                                <label class="form-check-label" for="is_active_input" id="is_active_label">Active</label>
-                            </div>
+                    <div class="row gy-2">
+                        <div class="col-md-6">
+                            <label for="name" class="form-label required">Name </label>
+                            <input type="text" name="name" value="{{ old('name') ?? $admin_user->name }}"
+                                class="form-control">
                         </div>
-                    @endbind
+                        <div class="col-md-6">
+                            <label for="email" class="form-label required">Email </label>
+                            <input type="email" name="email" value="{{ old('email') ?? $admin_user->email }}"
+                                class="form-control">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="user_name" class="form-label">user name </label>
+                            <input type="text" name="user_name" value="{{ old('name_name') ?? $admin_user->name_name }}"
+                                class="form-control">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="phone" class="form-label required">Phone </label>
+                            <input type="text" name="phone" value="{{ old('phone') ?? $admin_user->phone }}"
+                                class="form-control" oninput="phoneIn(event)">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="gender" class="form-label">Gender *</label>
+                            <select class="form-select" name="gender">
+                                <option selected disabled value="">Choose...</option>
+                                @foreach ($genders as $key => $gender)
+                                    <option value="{{ $key }}" @selected($key == $admin_user->gender)>
+                                        {{ $gender }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="address" class="form-label required">address </label>
+                            <input type="text" name="address" value="{{ old('address') ?? $admin_user->address }}"
+                                class="form-control">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Old Image </label>
+                            <img src="{{ imagePath('user', $admin_user->image) }}" width="100px">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="image" class="form-label">image </label>
+                            <input type="file" name="image" class="form-control">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="password" class="form-label">Old Password</label>
+                            <input type="password" name="password" class="form-control">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" name="password" class="form-control">
+                        </div>
+                        <div class="col-md-12 text-center mt-2">
+                            <button type="reset" class="btn btn-danger">Reset</button>
+                            <button type="submit" class="btn btn-warning">Update</button>
+                        </div>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
