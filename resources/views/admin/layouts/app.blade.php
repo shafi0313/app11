@@ -29,6 +29,11 @@
     <link href="{{ asset('backend/vendor/datatables.net-bs5/css/dataTables.bootstrap5.min.css') }}" rel="stylesheet"
         type="text/css" />
 
+        {{-- summer note --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote-lite.min.css"
+    integrity="sha512-ZbehZMIlGA8CTIOtdE+M81uj3mrcgyrh6ZFeG33A4FHECakGrOsTPlPQ8ijjLkxgImrdmSVUHn1j+ApjodYZow=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
         <!-- Daterangepicker css -->
     <link rel="stylesheet" href="{{ asset('backend/vendor/daterangepicker/daterangepicker.css') }}">
 </head>
@@ -84,6 +89,11 @@
     <!-- Datatables js -->
     <script src="{{ asset('backend/vendor/datatables.net/js/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset('backend/vendor/datatables.net-bs5/js/dataTables.bootstrap5.min.js') }}"></script>
+
+    {{-- Summer Note --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote-lite.min.js"
+        integrity="sha512-lVkQNgKabKsM1DA/qbhJRFQU8TuwkLF2vSN3iU/c7+iayKs08Y8GXqfFxxTZr1IcpMovXnf2N/ZZoMgmZep1YQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- Daterangepicker js -->
     <script src="{{ asset('backend/vendor/daterangepicker/moment.min.js') }}"></script>
