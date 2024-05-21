@@ -353,23 +353,23 @@
 
             <li class="d-none d-sm-inline-block">
                 <a class="nav-link" data-bs-toggle="offcanvas" href="#theme-settings-offcanvas">
-                    <i class="ri-settings-3-fill fs-22"></i>
+                    <i class="fa-solid fa-gear fs-20"></i>
                 </a>
             </li>
 
             <li class="d-none d-sm-inline-block">
                 <div class="nav-link" id="light-dark-mode">
-                    <i class="ri-moon-fill fs-22"></i>
+                    <i class="fa-solid fa-moon fs-20"></i>
                 </div>
             </li>
 
 
             <li class="d-none d-md-inline-block">
                 <a class="nav-link" href="" data-toggle="fullscreen">
-                    <i class="ri-fullscreen-line fs-22"></i>
+                    {{-- <i class="ri-fullscreen-line fs-22"></i> --}}
+                    <i class="fa-solid fa-expand fs-20"></i>
                 </a>
             </li>
-
             <li class="dropdown me-md-2">
                 <a class="nav-link dropdown-toggle arrow-none nav-user px-2" data-bs-toggle="dropdown" href="#"
                     role="button" aria-haspopup="false" aria-expanded="false">
