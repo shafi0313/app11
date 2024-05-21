@@ -366,7 +366,6 @@
 
             <li class="d-none d-md-inline-block">
                 <a class="nav-link" href="" data-toggle="fullscreen">
-                    {{-- <i class="ri-fullscreen-line fs-22"></i> --}}
                     <i class="fa-solid fa-expand fs-20"></i>
                 </a>
             </li>

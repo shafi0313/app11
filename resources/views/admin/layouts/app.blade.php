@@ -11,9 +11,6 @@
     <!-- App favicon -->
     <link rel="shortcut icon" href="{{ asset('backend/images/favicon.ico') }}">
 
-    <!-- Daterangepicker css -->
-    <link rel="stylesheet" href="{{ asset('backend/vendor/daterangepicker/daterangepicker.css') }}">
-
     <!-- Theme Config Js -->
     <script src="{{ asset('backend/js/config.js') }}"></script>
 
@@ -31,6 +28,9 @@
     <!-- Datatables css -->
     <link href="{{ asset('backend/vendor/datatables.net-bs5/css/dataTables.bootstrap5.min.css') }}" rel="stylesheet"
         type="text/css" />
+
+        <!-- Daterangepicker css -->
+    <link rel="stylesheet" href="{{ asset('backend/vendor/daterangepicker/daterangepicker.css') }}">
 </head>
 
 <body>
