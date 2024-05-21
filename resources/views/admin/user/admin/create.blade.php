@@ -36,7 +36,7 @@
                             <input type="file" name="image" class="form-control">
                         </div>
                         <div class="col-md-12">
-                            <label for="address" class="form-label">address </label>
+                            <label for="address" class="form-label required">address </label>
                             <input type="text" name="address" class="form-control">
                         </div>
                         <div class="col-md-6">
