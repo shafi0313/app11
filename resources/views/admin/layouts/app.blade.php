@@ -34,8 +34,6 @@
     integrity="sha512-ZbehZMIlGA8CTIOtdE+M81uj3mrcgyrh6ZFeG33A4FHECakGrOsTPlPQ8ijjLkxgImrdmSVUHn1j+ApjodYZow=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        <!-- Daterangepicker css -->
-    <link rel="stylesheet" href="{{ asset('backend/vendor/daterangepicker/daterangepicker.css') }}">
 </head>
 
 <body>
@@ -95,9 +93,6 @@
         integrity="sha512-lVkQNgKabKsM1DA/qbhJRFQU8TuwkLF2vSN3iU/c7+iayKs08Y8GXqfFxxTZr1IcpMovXnf2N/ZZoMgmZep1YQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <!-- Daterangepicker js -->
-    <script src="{{ asset('backend/vendor/daterangepicker/moment.min.js') }}"></script>
-    <script src="{{ asset('backend/vendor/daterangepicker/daterangepicker.js') }}"></script>
 
     <!-- App js -->
     <script src="{{ asset('backend/js/app.min.js') }}"></script>
